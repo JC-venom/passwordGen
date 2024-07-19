@@ -6,11 +6,12 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 const password1 = document.getElementById("password-1")
 const password2 = document.getElementById("password-2")
 const button = document.getElementById("generate-button")
-button.disabled = false
 //generate 2 random passwords when a button is clicked
 //each password should be 15 characters long
 
 function generate() {
+    password1.textContent = ""
+    password2.textContent = ""
     for (let i = 0; i < 16; i++) {
         let randomInt = Math.floor(Math.random() * characters.length)
         password1.textContent += characters[randomInt]     
@@ -19,11 +20,4 @@ function generate() {
         let randomInt = Math.floor(Math.random() * characters.length)
         password2.textContent += characters[randomInt]   
     }
-    button.disabled = true
-}
-
-function clearPasswords() {
-    password1.textContent = ""
-    password2.textContent = ""
-    button.disabled = false
 }
