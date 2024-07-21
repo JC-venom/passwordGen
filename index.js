@@ -6,8 +6,8 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 const password1 = document.getElementById("password-1")
 const password2 = document.getElementById("password-2")
 const button = document.getElementById("generate-button")
-//generate 2 random passwords when a button is clicked
-//each password should be 15 characters long
+
+
 
 function generate() {
     password1.textContent = ""
